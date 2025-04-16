@@ -9,6 +9,8 @@ const amount = document.getElementById("amount");
 const currency = document.getElementById("currency");
 const footer = document.querySelector("main footer"); // Dentro da main, selecione o footer. 
 
+const description = document.getElementById("description"); // Seleciona o elemento com o id "description".
+
 // Manipulando o input amount para receber somente números.
 amount.addEventListener("input", (event) => {  
   const hasCaractersRegex = /\D+/g 
@@ -39,6 +41,8 @@ form.onsubmit = (event) => {
 // Função para converter a moeda.
 function convertCurrency(amount, price, symbol){
   try{
+    description.textContent = `${symbol} 1 = ${price}`
+
     footer.classList.add("show-result") // Adiciona a classe show-result ao footer para exibir o resultado
   }catch(error){
     alert("Erro ao converter a moeda: ", error)

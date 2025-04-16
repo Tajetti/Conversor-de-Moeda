@@ -5,4 +5,4 @@
 <p align="center">
   <img src="img/Main.png" alt="Tela do Conversor">
 </p>
-
+<p>O usuário poderá decidir qual será o valor e o tipo de moeda para fazer a conversão em reais</p>

@@ -3,6 +3,6 @@
 
 <h2>-> Imagem da tela inicial</h2>
 <p align="center">
-  <img src="img/Main.png" alt="Tela do Conversor" width="600">
+  <img src="img/Main.png" alt="Tela do Conversor">
 </p>
 

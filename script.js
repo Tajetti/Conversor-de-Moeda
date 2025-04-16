@@ -44,10 +44,19 @@ function convertCurrency(amount, price, symbol){
   try{
     // Exibindo a cotação da moeda selecionada
     description.textContent = `${symbol} 1 = ${formatCurrencyBRL(price)}`
+        
     // Calcula o total
-    let total = amount * price
+    let total = (amount * price)
+    // Verifica se um resultado não é um número!
+    if(isNaN(total)){
+      return alert("Por favor, digite um valor corretamente!")
+    }
+    // -- 2 TIPOS DE FORMATAÇÃO DO VALOR TOTAL -- //
+    total = formatCurrencyBRL(total).replace("R$", "")
+    //let total = String(amount * price).replace("." , ",")
+
     // Exibe o resultado total.
-    result.textContent = total
+    result.textContent = `${total} Reais`
 
     footer.classList.add("show-result") // Adiciona a classe show-result ao footer para exibir o resultado
   }catch(error){
